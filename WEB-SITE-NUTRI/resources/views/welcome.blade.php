@@ -3,56 +3,89 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bem-vindo</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #f3f4f6;
-            color: #1f2937;
-        }
-        .container {
-            max-width: 800px;
-            padding: 2rem;
-            text-align: center;
-        }
-        .welcome-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 0.25rem;
-            margin: 0.5rem;
-        }
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Minha Nutrição - Home</title>
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
 </head>
 <body>
-    <div class="container">
-        <div class="welcome-card">
-            <h1>Bem-vindo ao Sistema!</h1>
-            <p>Parabéns por fazer login. Estamos felizes em ter você aqui!</p>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <img src="{{ asset('imgs/logo.jpg') }}" alt="" class="logo-img">
+            <div class="logo-text">Clínica Bem Viver</div>
         </div>
         <nav>
-            <a href="/dashboard" class="btn">Dashboard</a>
-            <a href="/perfil" class="btn">Meu Perfil</a>
-            <a href="/logout" class="btn">Sair</a>
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            <a href="#agendamento" class="button">Agendamento</a>
+            <!-- Botão de Login -->
+            <form action="/register" method="get" style="margin: 0;">
+                <button class="login-button" type="submit">Fazer Login</button>
+            </form>
         </nav>
+    </header>
+    
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Seção de Cards -->
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ asset('imgs/card2.jpg') }}" alt="Nutricionista">
+                <h3>Consultas Nutricionais</h3>
+                <p>Agende sua consulta com um profissional especializado.</p>
+                <a href="#agendamento" class="button">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="{{ asset('imgs/card1.jpg') }}" alt="Receitas">
+                <h3>Receitas Saudáveis</h3>
+                <p>Explore diversas receitas para uma vida saudável.</p>
+                <a href="#receitas" class="button">Explorar</a>
+            </div>
+            <div class="card">
+                <img src="{{ asset('imgs/card3.jpg') }}" alt="Dicas">
+                <h3>Dicas de Nutrição</h3>
+                <p>Acompanhe as melhores dicas para seu bem-estar.</p>
+                <a href="#dicas" class="button">Ver Dicas</a>
+            </div>
+        </div>
     </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Clínica Bem Viver</h3>
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Horário de Funcionamento</h4>
+                <p>Segunda a Sexta: 8h - 18h</p>
+                <p>Sábado: 8h - 14h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Endereço</h4>
+                <p>Rua Exemplo, 123, Centro - Cidade, Estado</p>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p><a href="https://wa.me/1234567890" target="_blank">WhatsApp: +55 12 3456-7890</a></p>
+                <p><a href="https://wa.me/9876543210" target="_blank">WhatsApp: +55 98 7654-3210</a></p>
+            </div>
+    
+            <div class="footer-social">
+                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/?lang=pt-br" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
