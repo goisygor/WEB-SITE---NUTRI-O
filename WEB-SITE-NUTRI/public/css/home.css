@@ -14,6 +14,103 @@ body {
     margin: 0 auto;
     padding: 2rem;
 }
+/* Estilo para o dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #E1FCF5; /* Fundo do dropdown */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #333; /* Cor dos links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #B2E0E5; /* Efeito de hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Mostra o dropdown ao passar o mouse */
+}
+
+   /* Estilo do carrossel */
+   .carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-indicators span {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
 
 /* Estilo geral do cabeçalho */
 header {
@@ -94,10 +191,6 @@ nav button:active {
     }
 }
 
-
-
-
-
 /* Seção de Cards */
 .card-container {
     display: grid;
@@ -134,6 +227,29 @@ nav button:active {
 .card p {
     margin: 0 1rem 1rem;
     color: #555; /* Cor mais clara para o texto do card */
+}
+
+/* Botões nos links do card */
+.card a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00BFAE; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    margin-top: 15px; /* Espaçamento para separar os botões dos textos */
+    width: 100%; /* Para evitar que os botões fiquem com tamanhos diferentes */
+    box-sizing: border-box;
+}
+
+/* Hover e interação */
+.card a.button:hover {
+    background-color: #008F81; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho */
 }
 
 /* Rodapé */
