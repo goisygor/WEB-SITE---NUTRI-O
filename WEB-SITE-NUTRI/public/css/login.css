@@ -1,0 +1,49 @@
+/* Exemplo simples para login */
+body {
+    background-color: #F0F8FF; /* Cor suave para o fundo */
+}
+
+.login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 120px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+}
+
+.login-container .form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.login-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00BFAE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.login-container button:hover {
+    background-color: #008F81;
+}

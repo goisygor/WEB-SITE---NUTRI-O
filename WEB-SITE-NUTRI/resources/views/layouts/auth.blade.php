@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Cabeçalho -->
-    <!-- <header>
+    <header>
         <div class="logo-container">
             <img src="{{ asset('imgs/logo.jpg') }}" alt="Logo" class="logo-img">
             <div class="logo-text">Clínica Bem Viver</div>
@@ -20,7 +20,7 @@
             <a href="#servicos">Serviços</a>
             <a href="{{ route('usuarios.login') }}" class="login-button">Fazer Login</a>
         </nav>
-    </header> -->
+    </header>
 
     <!-- Conteúdo Principal -->
     @yield('content')
