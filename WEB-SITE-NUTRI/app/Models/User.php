@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'tipo_usuario',
     ];
 
     /**
@@ -44,5 +45,15 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    //verifica se o usuário é um administrador
+    public function isAdmin(){
+        return $this->tipo_usuario === 'administrador';
+    }
+
+    //verifica se o usuário é cliente
+    public function isClient(){
+        return $this->tipo_usuario === 'cliente';
     }
 }
