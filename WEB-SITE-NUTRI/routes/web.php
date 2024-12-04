@@ -4,6 +4,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AgendamentoController;
+use App\Http\Controllers\ConsultaController;
 use App\Http\Middleware\ProdutosMiddleware;
 
 // Rota para exibir a página inicial (welcome)
@@ -49,3 +50,9 @@ Route::get('/sobre-nos', function () {
 // Rotas para o agendamento de consultas
 Route::get('/agendamento', [AgendamentoController::class, 'index'])->name('agendamento.index');
 Route::post('/agendamento', [AgendamentoController::class, 'store'])->name('agendamento.submit');
+
+// Rotas para Minhas Consultas
+Route::get('/minhas-consultas', [ConsultaController::class, 'index'])->name('consultas.index')->middleware('auth');
+Route::get('/consultas/create', [ConsultaController::class, 'create'])->name('consultas.create')->middleware('auth');
+Route::get('/consultas/{consulta}/edit', [ConsultaController::class, 'edit'])->name('consultas.edit')->middleware('auth');
+Route::delete('/consultas/{consulta}', [ConsultaController::class, 'destroy'])->name('consultas.destroy')->middleware('auth');
