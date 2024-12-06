@@ -16,8 +16,8 @@
             <div class="logo-text">Clínica Bem Viver</div>
         </div>
         <nav>
-            <a href="#sobre-nos">Sobre Nós</a>
-            <a href="#servicos">Serviços</a>
+            {{-- <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#servicos">Serviços</a> --}}
             <a href="{{ route('usuarios.login') }}" class="login-button">Fazer Login</a>
         </nav>
     </header>
