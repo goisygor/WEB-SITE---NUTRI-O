@@ -11,15 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Criação da tabela 'usuarios'
-        Schema::create('usuarios', function (Blueprint $table) {
-            $table->id(); // Cria a coluna 'id' como chave primária
-            $table->string('nome', 100); // Cria a coluna 'nome' (máximo de 100 caracteres)
-            $table->string('email', 150)->unique(); // Cria a coluna 'email' com índice único
-            $table->string('senha'); // Cria a coluna 'senha'
-            $table->timestamp('criado_em')->useCurrent(); // Cria a coluna 'criado_em' com valor padrão de timestamp atual
-            $table->timestamp('atualizado_em')->useCurrent()->nullable(); // Cria a coluna 'atualizado_em', permitindo valor nulo
-        });
 
         // Criação da tabela 'produtos'
         Schema::create('produtos', function (Blueprint $table) {

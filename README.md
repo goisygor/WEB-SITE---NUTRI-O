@@ -1,6 +1,11 @@
-# **Nutrição Inteligente: Avaliação e Planejamento Alimentar Simplificado**
+# SITE NUTRIÇÃO
+
+# **Nutrição Inteligente: Avaliação e Planejamento Alimentar Simplificado (Sprint 1)**
 
 ## **1. Título e Introdução**
+
+### **Título**
+
 **"Nutrição Inteligente"**
 
 Subtítulo: **"Personalização e saúde ao seu alcance com tecnologia e eficiência"**
@@ -134,4 +139,29 @@ Subtítulo: **"Personalização e saúde ao seu alcance com tecnologia e eficiê
     - Desenvolver protótipo.
     - Realizar testes com usuários reais para validar e ajustar a solução.
 
+### **Agradecimentos e Contato**
 
+- **Obrigado pela atenção!**
+- **Contato:** [Insira e-mail, telefone e redes sociais]
+
+Se precisar de mais detalhes ou um protótipo inicial, é só avisar!
+
+## Sprint 2
+
+- **Implementação das funcionalidades essenciais:**
+    - efetuar cadastro e login do cliente
+    - navegação entre as páginas
+    - integração do banco de dados que seria o PgSQL.
+- Testes Iniciais:
+    - testes do cadastro e login se estão sendo feito
+    - testes após login se a lógica esta reconhecendo quem é médico e quem é paciente
+    - verificação se as consultas estão aparecendo para o médico e se esta ficando cadastrado a consulta para o cliente
+- Refinamento da Interface:
+    - Solicitado pelo professor para que filtramos o projeto, pois estava muito generalizado, desta forma entramos no consenso de efetuar um projeto mais focado na área de saúde/bem estar/nutricional, onde auxilia as pessoas a obterem informações e dicas de forma mais prática, para que elas possam ter o inicio de projeto de evolução em sua vida podendo também marcar consultas diretamente com nutricionistas caso o cliente deseje
+
+    ## Sprint 3
+
+    testes de usabilidades e correções finais: ultima semana feito testes das rotas de navegação, adicionando status na lista de consultas para os clientes, testes de validações e retornos visuais para os clientes, estilização e ultimos ajustes das telas, teste do frame de IMC e adaptação do site.
+
+    Diagrama de classe 
+    ![alt text](image.png)
