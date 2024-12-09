@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UserController;
@@ -51,8 +52,12 @@ Route::get('/sobre-nos', function () {
 Route::get('/agendamento', [AgendamentoController::class, 'index'])->name('agendamento.index');
 Route::post('/agendamento', [AgendamentoController::class, 'store'])->name('agendamento.submit');
 
-// Rotas para Minhas Consultas
-Route::get('/minhas-consultas', [ConsultaController::class, 'index'])->name('consultas.index')->middleware('auth');
-Route::get('/consultas/create', [ConsultaController::class, 'create'])->name('consultas.create')->middleware('auth');
-Route::get('/consultas/{consulta}/edit', [ConsultaController::class, 'edit'])->name('consultas.edit')->middleware('auth');
-Route::delete('/consultas/{consulta}', [ConsultaController::class, 'destroy'])->name('consultas.destroy')->middleware('auth');
+// Rotas para Minhas Consultas com proteção de autenticação
+Route::prefix('minhas-consultas')->middleware('auth')->group(function () {
+    Route::get('/', [ConsultaController::class, 'index'])->name('consultas.index'); // Lista de consultas do usuário logado
+    Route::get('/create', [ConsultaController::class, 'create'])->name('consultas.create'); // Formulário de criação de consulta
+    Route::post('/', [ConsultaController::class, 'store'])->name('consultas.store'); // Armazena nova consulta
+    Route::get('/{consulta}/edit', [ConsultaController::class, 'edit'])->name('consultas.edit'); // Formulário de edição
+    Route::put('/{consulta}', [ConsultaController::class, 'update'])->name('consultas.update'); // Atualiza consulta
+    Route::delete('/{consulta}', [ConsultaController::class, 'destroy'])->name('consultas.destroy'); // Deleta consulta
+});

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -28,6 +29,7 @@ class Agendamento extends Model
         'modalidade_exame',
         'exame',
         'medico',
+        'data_hora',  // Adicionando o novo campo data_hora
     ];
 
     // Caso a tabela não tenha timestamps, desative a propriedade abaixo (não recomendado para tabelas que registram dados temporais)
@@ -35,4 +37,15 @@ class Agendamento extends Model
 
     // Se não estiver usando os timestamps, defina como false
     // public $timestamps = false; 
+
+    // Caso seja necessário tratar a data como tipo Date
+    protected $dates = ['data_hora'];
+
+    /**
+     * Relacionamento com o usuário (quem fez o agendamento)
+     */
+    public function usuario()
+    {
+        return $this->belongsTo(User::class, 'usuario_id');
+    }
 }

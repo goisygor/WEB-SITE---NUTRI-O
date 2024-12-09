@@ -1,4 +1,5 @@
-<?php
+<?php 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -24,6 +25,8 @@ class CreateAgendamentosTable extends Migration
             $table->string('modalidade_exame');
             $table->string('exame');
             $table->string('medico');
+            // Adicionando o campo data_hora
+            $table->timestamp('data_hora')->nullable(); // Definido como nullable, pois pode ser opcional
             $table->timestamps();
         });
     }

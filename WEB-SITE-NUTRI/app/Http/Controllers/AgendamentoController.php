@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -32,6 +33,7 @@ class AgendamentoController extends Controller
             'modalidade_exame' => 'required|string|max:255',
             'exame' => 'required|string|max:255',
             'medico' => 'required|string|max:255',
+            'data_hora' => 'required|date|unique:agendamentos,data_hora', // Valida que o horário não esteja ocupado
         ]);
 
         // Criação do agendamento no banco de dados

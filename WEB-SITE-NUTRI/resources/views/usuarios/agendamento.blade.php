@@ -22,8 +22,13 @@
             <div class="dropdown">
                 <a href="#servicos">Serviços</a>
                 <div class="dropdown-content">
+                    <!-- Link de Agendamento Online modificado -->
+                    <!-- <a href="{{ route('agendamento.index') }}">Agendamento Online</a> -->
                     <a href="#medicos">Nossa Equipe</a>
+                    <a href="#planos">Planos de Atendimento</a>
                     <a href="#avaliacao">Avaliações Nutricionais</a>
+                    <!-- Link para Minhas Consultas -->
+                    <a href="{{ route('consultas.index') }}">Minhas Consultas</a>
                 </div>
             </div>
         </nav>
@@ -105,13 +110,17 @@
                     <label for="medico">Médico:</label>
                     <input type="text" id="medico" name="medico" required>
                 </div>
+                <div class="form-group">
+                    <label for="data_hora">Data e Hora:</label>
+                    <input type="datetime-local" id="data_hora" name="data_hora" required>
+                </div>
                 <button type="submit" class="btn-agendar">Agendar</button>
             </form>
         </section>
     </main>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Clínica Bem Viver</h3>
@@ -139,7 +148,7 @@
                 <a href="https://www.linkedin.com/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>
 @endsection
