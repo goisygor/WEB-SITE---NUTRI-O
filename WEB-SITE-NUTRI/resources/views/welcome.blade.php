@@ -81,8 +81,9 @@
                 <img src="{{ asset('imgs/card4.jpg') }}" alt="Nutricionista">
                 <h3>Cálculos on-line</h3>
                 <p>Descubra como está a sua saúde com apenas alguns cliques! Utilize nossa ferramenta para calcular o IMC (Índice de Massa Corporal) e tenha um ponto de partida para entender melhor o equilíbrio do seu corpo.</p>
-                <a href="https://www.sonutricao.com.br/conteudo/calculos/imc.php" class="button">Saiba Mais</a>
+                <a href="{{ route('calculadora-imc') }}" class="button">Saiba Mais</a>
             </div>
+            
             <div class="card">  
                 <img src="{{ asset('imgs/card5.jpg') }}" alt="Receitas">
                 <h3>Curiosidades</h3>

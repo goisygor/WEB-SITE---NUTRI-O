@@ -8,6 +8,7 @@ use App\Http\Controllers\AgendamentoController;
 use App\Http\Controllers\ConsultaController;
 use App\Http\Middleware\ProdutosMiddleware;
 
+
 // Rota para exibir a página inicial (welcome)
 Route::get('/', function () {
     return view('welcome');
@@ -47,6 +48,12 @@ Route::get('produtos/{produto}', [ProdutoController::class, 'show'])
 Route::get('/sobre-nos', function () {
     return view('pages.sobre-nos');
 })->name('sobre-nos');
+
+// Rota para a página de cálculo de IMC
+Route::get('/calculadora-imc', function () {
+    return view('pages.calculadora-imc'); // Ajuste para refletir o diretório correto
+})->name('calculadora-imc');
+
 
 // Rotas para o agendamento de consultas
 Route::get('/agendamento', [AgendamentoController::class, 'index'])->name('agendamento.index');

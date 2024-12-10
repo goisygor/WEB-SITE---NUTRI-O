@@ -46,7 +46,7 @@
             <label for="motivo_cancelamento">Motivo do Cancelamento</label>
             <select class="form-control" id="motivo_cancelamento" name="motivo_cancelamento">
                 <option value="Paciente não compareceu" {{ old('motivo_cancelamento') == 'Paciente não compareceu' ? 'selected' : '' }}>Paciente não compareceu</option>
-                <option value="Consulta remarcada" {{ old('motivo_cancelamento') == 'Consulta remarcada' ? 'selected' : '' }}>Consulta remarcada</option>
+                <option value="Consulta remcarada" {{ old('motivo_cancelamento') == 'Consulta remarcada' ? 'selected' : '' }}>Consulta remarcada</option>
                 <option value="Erro administrativo" {{ old('motivo_cancelamento') == 'Erro administrativo' ? 'selected' : '' }}>Erro administrativo</option>
                 <option value="Solicitação do paciente" {{ old('motivo_cancelamento') == 'Solicitação do paciente' ? 'selected' : '' }}>Solicitação do paciente</option>
             </select>
@@ -68,5 +68,77 @@
         toggleMotivoCancelamento(document.getElementById('status').value);
     });
 </script>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 20px auto;
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    h1 {
+        color: #00BFAE;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .form-control, .form-select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #00BFAE;
+        box-shadow: 0 0 8px rgba(0, 191, 174, 0.5);
+    }
+
+    button {
+        background-color: #00BFAE;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #009e91;
+        transform: scale(1.05);
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+    .alert {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+</style>
 @endsection
-    
